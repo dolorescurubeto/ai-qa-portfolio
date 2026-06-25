@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Week 3 — Factual vs Semantic Report</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; }
+    h1 { font-size: 1.5rem; }
+    .summary { background: #f4f6f8; padding: 1rem 1.25rem; border-radius: 8px; margin-bottom: 1.5rem; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem 0.65rem; text-align: left; vertical-align: top; }
+    th { background: #2c3e50; color: #fff; }
+    tr.gap { background: #fff3cd; }
+    tr.both-pass { background: #d4edda; }
+    tr.both-fail { background: #f8d7da; }
+    .legend span { display: inline-block; padding: 0.2rem 0.5rem; margin-right: 0.5rem; border-radius: 4px; }
+    .legend .gap { background: #fff3cd; }
+    .legend .both-pass { background: #d4edda; }
+    .legend .both-fail { background: #f8d7da; }
+  </style>
+</head>
+<body>
+  <h1>Week 3 — Factual vs BERTScore Report</h1>
+  <p>AI QA Portfolio | Generated 2026-06-25 21:10 UTC</p>
+
+  <div class="summary">
+    <p><strong>Candidates:</strong> 23</p>
+    <p><strong>Factual PASS:</strong> 12/23</p>
+    <p><strong>Semantic PASS (F1 &ge; 0.85):</strong> 23/23</p>
+    <p><strong>Gap (semantic PASS + factual FAIL):</strong> 11</p>
+    <p><strong>Model:</strong> distilroberta-base</p>
+  </div>
+
+  <div class="legend">
+    <span class="gap">Gap — dangerous</span>
+    <span class="both-pass">Both pass</span>
+    <span class="both-fail">Both fail</span>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Scenario</th>
+        <th>ID</th>
+        <th>Text</th>
+        <th>Factual</th>
+        <th>BERTScore F1</th>
+        <th>Semantic</th>
+        <th>Gap?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="both-pass">
+  <td>checking_balance</td>
+  <td>cand1</td>
+  <td>Your checking account balance is $1,847.32.</td>
+  <td>PASS</td>
+  <td>1.0000</td>
+  <td>PASS</td>
+  <td><strong></strong></td>
+</tr><tr class="gap">
+  <td>checking_balance</td>
+  <td>cand2</td>
+  <td>The balance in your checking account is $1,800.32.</td>
+  <td>FAIL</td>
+  <td>0.9677</td>
+  <td>PASS</td>
+  <td><strong>YES</strong></td>
+</tr><tr class="gap">
+  <td>checking_balance</td>
+  <td>cand3</td>
+  <td>Your savings account balance is $1,847.32.</td>
+  <td>FAIL</td>
+  <td>0.9910</td>
+  <td>PASS</td>
+  <td><strong>YES</strong></td>
+</tr><tr class="both-pass">
+  <td>checking_balance</td>
+  <td>cand4</td>
+  <td>You have $1,847.32 in your checking account.</td>
+  <td>PASS</td>
+  <td>0.9746</td>
+  <td>PASS</td>
+  <td><strong></strong></td>
+</tr><tr class="gap">
+  <td>checking_balance</td>
+  <td>cand5</td>
+  <td>You have $1,847.32 in your account.</td>
+  <td>FAIL</td>
+  <td>0.9678</td>
+  <td>PASS</td>
+  <td><strong>YES</strong></td>
+</tr><tr class="both-pass">
+  <td>checking_balance</td>
+  <td>cand6</td>
+  <td>Your checking balance is $1,847.32 today.</td>
+  <td>PASS</td>
+  <td>0.9866</td>
+  <td>PASS</td>
+  <td><strong></strong></td>
+</tr><tr class="both-pass">
+  <td>savings_balance</td>
+  <td>cand1</td>
+  <td>Your savings account balance is $5,200.00.</td>
+  <td>PASS</td>
+  <td>1.0000</td>
+  <td>PASS</td>
+  <td><strong></strong></td>
+</tr><tr class="gap">
+  <td>savings_balance</td>
+  <td>cand2</td>
+  <td>Your savings balance is $5,000.00.</td>
+  <td>FAIL</td>
+  <td>0.9839</td>
+  <td>PASS</td>
+  <td><strong>YES</strong></td>
+</tr><tr class="gap">
+  <td>savings_balance</td>
+  <td>cand3</td>
+  <td>Your checking account balance is $5,200.00.</td>
+  <td>FAIL</td>
+  <td>0.9904</td>
+  <td>PASS</td>
+  <td><strong>YES</strong></td>
+</tr><tr class="both-pass">
+  <td>savings_balance</td>
+  <td>cand4</td>
+  <td>You have $5,200.00 in your savings account.</td>
+  <td>PASS</td>
+  <td>0.9728</td>
+  <td>PASS</td>
+  <td><strong></strong></td>
+</tr><tr class="gap">
+  <td>savings_balance</td>
+  <td>cand5</td>
+  <td>You have $5,200.00 in your account.</td>
+  <td>FAIL</td>
+  <td>0.9651</td>
+  <td>PASS</td>
+  <td><strong>YES</strong></td>
+</tr><tr class="both-pass">
+  <td>savings_balance</td>
+  <td>cand6</td>
+  <td>Your savings balance is $5,200.00 today.</td>
+  <td>PASS</td>
+  <td>0.9853</td>
+  <td>PASS</td>
+  <td><strong></strong></td>
+</tr><tr class="both-pass">
+  <td>term_deposit_balance</td>
+  <td>cand1</td>
+  <td>Your term deposit account balance is $12,500.00.</td>
+  <td>PASS</td>
+  <td>1.0000</td>
+  <td>PASS</td>
+  <td><strong></strong></td>
+</tr><tr class="gap">
+  <td>term_deposit_balance</td>
+  <td>cand2</td>
+  <td>Your term deposit has $12,000.00.</td>
+  <td>FAIL</td>
+  <td>0.9733</td>
+  <td>PASS</td>
+  <td><strong>YES</strong></td>
+</tr><tr class="both-pass">
+  <td>term_deposit_balance</td>
+  <td>cand3</td>
+  <td>You have $12,500.00 in your term deposit.</td>
+  <td>PASS</td>
+  <td>0.9661</td>
+  <td>PASS</td>
+  <td><strong></strong></td>
+</tr><tr class="both-pass">
+  <td>transfer_limit</td>
+  <td>cand1</td>
+  <td>Your daily transfer limit on your checking account is $3,000.00.</td>
+  <td>PASS</td>
+  <td>1.0000</td>
+  <td>PASS</td>
+  <td><strong></strong></td>
+</tr><tr class="gap">
+  <td>transfer_limit</td>
+  <td>cand2</td>
+  <td>Your daily transfer limit on your checking account is $2,500.00.</td>
+  <td>FAIL</td>
+  <td>0.9878</td>
+  <td>PASS</td>
+  <td><strong>YES</strong></td>
+</tr><tr class="both-pass">
+  <td>transfer_limit</td>
+  <td>cand3</td>
+  <td>You can transfer up to $3,000.00 from your checking account today.</td>
+  <td>PASS</td>
+  <td>0.9513</td>
+  <td>PASS</td>
+  <td><strong></strong></td>
+</tr><tr class="gap">
+  <td>transfer_limit</td>
+  <td>cand4</td>
+  <td>You can transfer up to $3,200.00 from your checking account today.</td>
+  <td>FAIL</td>
+  <td>0.9457</td>
+  <td>PASS</td>
+  <td><strong>YES</strong></td>
+</tr><tr class="both-pass">
+  <td>minimum_balance_savings</td>
+  <td>cand1</td>
+  <td>Your savings account minimum balance requirement is $100.00.</td>
+  <td>PASS</td>
+  <td>1.0000</td>
+  <td>PASS</td>
+  <td><strong></strong></td>
+</tr><tr class="gap">
+  <td>minimum_balance_savings</td>
+  <td>cand2</td>
+  <td>Your savings account minimum balance requirement is $150.00.</td>
+  <td>FAIL</td>
+  <td>0.9938</td>
+  <td>PASS</td>
+  <td><strong>YES</strong></td>
+</tr><tr class="gap">
+  <td>minimum_balance_savings</td>
+  <td>cand3</td>
+  <td>Your checking account minimum balance requirement is $100.00.</td>
+  <td>FAIL</td>
+  <td>0.9904</td>
+  <td>PASS</td>
+  <td><strong>YES</strong></td>
+</tr><tr class="both-pass">
+  <td>minimum_balance_savings</td>
+  <td>cand4</td>
+  <td>You must maintain at least $100.00 in your savings account.</td>
+  <td>PASS</td>
+  <td>0.9434</td>
+  <td>PASS</td>
+  <td><strong></strong></td>
+</tr>
+    </tbody>
+  </table>
+
+  <h2>Why the gap matters</h2>
+  <p>
+    A response can look semantically similar to the reference (high BERTScore)
+    but still contain wrong facts. Banking chatbots need <strong>factual checks</strong>
+    in addition to semantic metrics.
+  </p>
+</body>
+</html>

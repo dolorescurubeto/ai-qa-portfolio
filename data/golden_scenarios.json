@@ -1,0 +1,42 @@
+{
+  "checking_balance": {
+    "description": "Checking account balance inquiry",
+    "reference": "Your checking account balance is $1,847.32.",
+    "facts": {
+      "balance": "$1,847.32",
+      "account_type": "checking"
+    }
+  },
+  "savings_balance": {
+    "description": "Savings account balance inquiry",
+    "reference": "Your savings account balance is $5,200.00.",
+    "facts": {
+      "balance": "$5,200.00",
+      "account_type": "savings"
+    }
+  },
+  "term_deposit_balance": {
+    "description": "Term deposit balance inquiry",
+    "reference": "Your term deposit account balance is $12,500.00.",
+    "facts": {
+      "balance": "$12,500.00",
+      "account_type": "term deposit"
+    }
+  },
+  "transfer_limit": {
+    "description": "Daily transfer limit inquiry",
+    "reference": "Your daily transfer limit on your checking account is $3,000.00.",
+    "facts": {
+      "balance": "$3,000.00",
+      "account_type": "checking"
+    }
+  },
+  "minimum_balance_savings": {
+    "description": "Minimum required balance for savings account",
+    "reference": "Your savings account minimum balance requirement is $100.00.",
+    "facts": {
+      "balance": "$100.00",
+      "account_type": "savings"
+    }
+  }
+}

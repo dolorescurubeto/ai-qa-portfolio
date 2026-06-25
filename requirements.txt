@@ -1,0 +1,9 @@
+# Week 3 — semantic metrics
+bert-score
+true-lies-validator
+nltk
+torch
+
+# Week 4+ (optional)
+# pytest
+# playwright

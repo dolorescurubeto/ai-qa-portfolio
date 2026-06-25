@@ -1,0 +1,236 @@
+[
+  {
+    "timestamp": "2026-06-25T21:24:38.775019+00:00",
+    "error_rate_simulated": 0.05,
+    "accuracy": 100.0,
+    "passed": 5,
+    "total": 5,
+    "results": [
+      {
+        "scenario": "checking_balance",
+        "reference": "Your checking account balance is $1,847.32.",
+        "output": "Your checking account balance is $1,847.32.",
+        "correct": true
+      },
+      {
+        "scenario": "savings_balance",
+        "reference": "Your savings account balance is $5,200.00.",
+        "output": "Your savings account balance is $5,200.00.",
+        "correct": true
+      },
+      {
+        "scenario": "term_deposit_balance",
+        "reference": "Your term deposit account balance is $12,500.00.",
+        "output": "Your term deposit account balance is $12,500.00.",
+        "correct": true
+      },
+      {
+        "scenario": "transfer_limit",
+        "reference": "Your daily transfer limit on your checking account is $3,000.00.",
+        "output": "Your daily transfer limit on your checking account is $3,000.00.",
+        "correct": true
+      },
+      {
+        "scenario": "minimum_balance_savings",
+        "reference": "Your savings account minimum balance requirement is $100.00.",
+        "output": "Your savings account minimum balance requirement is $100.00.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T21:24:38.783774+00:00",
+    "error_rate_simulated": 0.25,
+    "accuracy": 20.0,
+    "passed": 1,
+    "total": 5,
+    "results": [
+      {
+        "scenario": "checking_balance",
+        "reference": "Your checking account balance is $1,847.32.",
+        "output": "The balance in your checking account is $1,800.32.",
+        "correct": false
+      },
+      {
+        "scenario": "savings_balance",
+        "reference": "Your savings account balance is $5,200.00.",
+        "output": "You have $5,200.00 in your account.",
+        "correct": false
+      },
+      {
+        "scenario": "term_deposit_balance",
+        "reference": "Your term deposit account balance is $12,500.00.",
+        "output": "Your term deposit has $12,000.00.",
+        "correct": false
+      },
+      {
+        "scenario": "transfer_limit",
+        "reference": "Your daily transfer limit on your checking account is $3,000.00.",
+        "output": "You can transfer up to $3,000.00 from your checking account today.",
+        "correct": true
+      },
+      {
+        "scenario": "minimum_balance_savings",
+        "reference": "Your savings account minimum balance requirement is $100.00.",
+        "output": "Your checking account minimum balance requirement is $100.00.",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T21:24:38.783774+00:00",
+    "error_rate_simulated": 0.45,
+    "accuracy": 80.0,
+    "passed": 4,
+    "total": 5,
+    "results": [
+      {
+        "scenario": "checking_balance",
+        "reference": "Your checking account balance is $1,847.32.",
+        "output": "Your checking account balance is $1,847.32.",
+        "correct": true
+      },
+      {
+        "scenario": "savings_balance",
+        "reference": "Your savings account balance is $5,200.00.",
+        "output": "Your savings account balance is $5,200.00.",
+        "correct": true
+      },
+      {
+        "scenario": "term_deposit_balance",
+        "reference": "Your term deposit account balance is $12,500.00.",
+        "output": "You have $12,500.00 in your term deposit.",
+        "correct": true
+      },
+      {
+        "scenario": "transfer_limit",
+        "reference": "Your daily transfer limit on your checking account is $3,000.00.",
+        "output": "Your daily transfer limit on your checking account is $2,500.00.",
+        "correct": false
+      },
+      {
+        "scenario": "minimum_balance_savings",
+        "reference": "Your savings account minimum balance requirement is $100.00.",
+        "output": "You must maintain at least $100.00 in your savings account.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T21:25:38.754349+00:00",
+    "error_rate_simulated": 0.05,
+    "accuracy": 100.0,
+    "passed": 5,
+    "total": 5,
+    "results": [
+      {
+        "scenario": "checking_balance",
+        "reference": "Your checking account balance is $1,847.32.",
+        "output": "Your checking account balance is $1,847.32.",
+        "correct": true
+      },
+      {
+        "scenario": "savings_balance",
+        "reference": "Your savings account balance is $5,200.00.",
+        "output": "Your savings account balance is $5,200.00.",
+        "correct": true
+      },
+      {
+        "scenario": "term_deposit_balance",
+        "reference": "Your term deposit account balance is $12,500.00.",
+        "output": "Your term deposit account balance is $12,500.00.",
+        "correct": true
+      },
+      {
+        "scenario": "transfer_limit",
+        "reference": "Your daily transfer limit on your checking account is $3,000.00.",
+        "output": "Your daily transfer limit on your checking account is $3,000.00.",
+        "correct": true
+      },
+      {
+        "scenario": "minimum_balance_savings",
+        "reference": "Your savings account minimum balance requirement is $100.00.",
+        "output": "Your savings account minimum balance requirement is $100.00.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T21:25:38.759292+00:00",
+    "error_rate_simulated": 0.25,
+    "accuracy": 20.0,
+    "passed": 1,
+    "total": 5,
+    "results": [
+      {
+        "scenario": "checking_balance",
+        "reference": "Your checking account balance is $1,847.32.",
+        "output": "The balance in your checking account is $1,800.32.",
+        "correct": false
+      },
+      {
+        "scenario": "savings_balance",
+        "reference": "Your savings account balance is $5,200.00.",
+        "output": "You have $5,200.00 in your account.",
+        "correct": false
+      },
+      {
+        "scenario": "term_deposit_balance",
+        "reference": "Your term deposit account balance is $12,500.00.",
+        "output": "Your term deposit has $12,000.00.",
+        "correct": false
+      },
+      {
+        "scenario": "transfer_limit",
+        "reference": "Your daily transfer limit on your checking account is $3,000.00.",
+        "output": "You can transfer up to $3,000.00 from your checking account today.",
+        "correct": true
+      },
+      {
+        "scenario": "minimum_balance_savings",
+        "reference": "Your savings account minimum balance requirement is $100.00.",
+        "output": "Your checking account minimum balance requirement is $100.00.",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-25T21:25:38.759292+00:00",
+    "error_rate_simulated": 0.45,
+    "accuracy": 80.0,
+    "passed": 4,
+    "total": 5,
+    "results": [
+      {
+        "scenario": "checking_balance",
+        "reference": "Your checking account balance is $1,847.32.",
+        "output": "Your checking account balance is $1,847.32.",
+        "correct": true
+      },
+      {
+        "scenario": "savings_balance",
+        "reference": "Your savings account balance is $5,200.00.",
+        "output": "Your savings account balance is $5,200.00.",
+        "correct": true
+      },
+      {
+        "scenario": "term_deposit_balance",
+        "reference": "Your term deposit account balance is $12,500.00.",
+        "output": "You have $12,500.00 in your term deposit.",
+        "correct": true
+      },
+      {
+        "scenario": "transfer_limit",
+        "reference": "Your daily transfer limit on your checking account is $3,000.00.",
+        "output": "Your daily transfer limit on your checking account is $2,500.00.",
+        "correct": false
+      },
+      {
+        "scenario": "minimum_balance_savings",
+        "reference": "Your savings account minimum balance requirement is $100.00.",
+        "output": "You must maintain at least $100.00 in your savings account.",
+        "correct": true
+      }
+    ]
+  }
+]

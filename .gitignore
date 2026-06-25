@@ -1,0 +1,8 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+
+# Keep sample reports and drift history in the portfolio repo
+# (do not ignore reports/*.html or drift_results.json)
