@@ -2,7 +2,7 @@
 
 Practice portfolio for **AI Testing**, built after completing an AI-for-testers course.
 
-You do not need a job working with AI to practice: here you simulate a fictional banking chatbot and evaluate it with Python scripts.
+Job working with AI to practice: here I simulate a fictional banking chatbot and evaluate it with Python scripts.
 
 ## What this repo includes
 
@@ -34,7 +34,7 @@ cd week01-baseline
 python evaluate_factual.py
 ```
 
-3. When you finish week 1, continue with week 2 in the same plan.
+3. When I finish week 1, continue with week 2 in the same plan.
 4. Week 3 (semantic metrics):
 
 ```powershell
@@ -55,11 +55,11 @@ See `week04-drift/README.md` for GitHub push steps.
 
 ## Previous course projects
 
-If you already have exercises in `C:\Users\dell\ia-testers-practice`, this portfolio **organizes and extends** them. You do not need to delete anything.
+I already have exercises in `C:\Users\dell\ia-testers-practice`, this portfolio **organizes and extends** them. 
 
 ## Portfolio goal
 
-Demonstrate that you can:
+Demonstrate that I can:
 
 - Design test cases for AI (not just "does it respond?")
 - Validate **factual data** (amounts, account types)
@@ -67,6 +67,6 @@ Demonstrate that you can:
 - Detect **drift** when a model degrades over time
 - Document results with reports
 
-## For your resume (after completing all 4 weeks)
+## For my resume (after completing all 4 weeks)
 
 > Portfolio: QA evaluation suite for a fictional banking chatbot — golden prompt set, factual validation, semantic metrics (BERTScore/True Lies), drift testing, and HTML reports. Python, pytest, Playwright.
