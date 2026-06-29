@@ -1,0 +1,4 @@
+# Week 5 — transformer attention
+transformers
+torch
+matplotlib

@@ -12,6 +12,7 @@ Job working with AI to practice: here I simulate a fictional banking chatbot and
 | `week02-golden-set/` | Golden set of prompts (JSON file) | Easy |
 | `week03-metrics/` | BLEU, BERTScore, True Lies | Medium |
 | `week04-drift/` | Regression over time | Medium |
+| `week05-attention/` | BERT attention matrices + relevant tokens | Medium |
 | `data/` | Shared test data | — |
 | `reports/` | Generated HTML reports | — |
 
@@ -53,6 +54,15 @@ python drift_test.py --simulate-days 3
 
 See `week04-drift/README.md` for GitHub push steps.
 
+5. Week 5 (transformer attention):
+
+```powershell
+cd week05-attention
+python attention_explorer.py --heatmap
+```
+
+See `week05-attention/README.md`.
+
 ## Previous course projects
 
 I already have exercises in `C:\Users\dell\ia-testers-practice`, this portfolio **organizes and extends** them. 
@@ -65,8 +75,13 @@ Demonstrate that I can:
 - Validate **factual data** (amounts, account types)
 - Measure **semantic similarity** (BERTScore, True Lies)
 - Detect **drift** when a model degrades over time
+- Explore **transformer attention** (interpretability)
 - Document results with reports
 
+<<<<<<< HEAD
 ## For my resume (after completing all 4 weeks)
+=======
+## For your resume
+>>>>>>> 40bb155 (Add week05-attention: BERT semantic attention explorer)
 
-> Portfolio: QA evaluation suite for a fictional banking chatbot — golden prompt set, factual validation, semantic metrics (BERTScore/True Lies), drift testing, and HTML reports. Python, pytest, Playwright.
+> Portfolio: QA evaluation suite for a fictional banking chatbot — golden prompt set, factual validation, semantic metrics (BERTScore/True Lies), drift testing, BERT attention analysis, and HTML reports. Python.
