@@ -1,8 +1,8 @@
-# AI QA Portfolio — Dolores Curubeto
+﻿# AI QA Portfolio — Dolores Curubeto
 
 Practice portfolio for **AI Testing**, built after completing an AI-for-testers course.
 
-Job working with AI to practice: here I simulate a fictional banking chatbot and evaluate it with Python scripts.
+You do not need a job working with AI to practice: here you simulate a fictional banking chatbot and evaluate it with Python scripts.
 
 ## What this repo includes
 
@@ -35,7 +35,7 @@ cd week01-baseline
 python evaluate_factual.py
 ```
 
-3. When I finish week 1, continue with week 2 in the same plan.
+3. When you finish week 1, continue with week 2 in the same plan.
 4. Week 3 (semantic metrics):
 
 ```powershell
@@ -65,11 +65,11 @@ See `week05-attention/README.md`.
 
 ## Previous course projects
 
-I already have exercises in `C:\Users\dell\ia-testers-practice`, this portfolio **organizes and extends** them. 
+If you already have exercises in `C:\Users\dell\ia-testers-practice`, this portfolio **organizes and extends** them. You do not need to delete anything.
 
 ## Portfolio goal
 
-Demonstrate that I can:
+Demonstrate that you can:
 
 - Design test cases for AI (not just "does it respond?")
 - Validate **factual data** (amounts, account types)
@@ -78,10 +78,6 @@ Demonstrate that I can:
 - Explore **transformer attention** (interpretability)
 - Document results with reports
 
-<<<<<<< HEAD
-## For my resume (after completing all 4 weeks)
-=======
 ## For your resume
->>>>>>> 40bb155 (Add week05-attention: BERT semantic attention explorer)
 
 > Portfolio: QA evaluation suite for a fictional banking chatbot — golden prompt set, factual validation, semantic metrics (BERTScore/True Lies), drift testing, BERT attention analysis, and HTML reports. Python.
