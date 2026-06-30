@@ -60,7 +60,20 @@ python true_lies_report.py
 
 Opens `reports/week03_true_lies_checking.html`.
 
-### Step 4 — Optional BLEU demo
+### Step 4 — Hallucination vs factual check (True Lies)
+
+```powershell
+python hallucination_check.py
+python hallucination_check.py --retail
+```
+
+Compares our factual validator with True Lies labels:
+- **Factual accuracy issues** → wrong facts
+- **Possible hallucination** → low semantic similarity (True Lies definition)
+
+Reports: `reports/hallucination_check_banking.html` and `hallucination_check_retailco.html`
+
+### Step 5 — Optional BLEU demo
 
 ```powershell
 python bleu_ter_demo.py

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Hallucination check — RetailCo Day 1</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; }
+.summary { background: #f4f6f8; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: 0.85rem; }
+th, td { border: 1px solid #ccc; padding: 0.4rem 0.5rem; text-align: left; vertical-align: top; }
+th { background: #2c3e50; color: #fff; }
+tr.ok { background: #d4edda; }
+tr.gap { background: #fff3cd; }
+tr.hallu { background: #f8d7da; }
+tr.factual { background: #ffe8cc; }
+</style></head><body>
+<h1>Hallucination check — RetailCo Day 1</h1>
+<p>Generated 2026-06-30 14:02 UTC</p>
+<div class="summary">
+<p><b>Factual PASS:</b> 5/10</p>
+<p><b>True Lies PASS:</b> 3/10</p>
+<p><b>TL hallucination label:</b> 2</p>
+<p><b>TL factual issues label:</b> 5</p>
+</div>
+<table>
+<thead><tr>
+<th>Scenario</th><th>ID</th><th>Text</th>
+<th>Factual</th><th>True Lies</th><th>F1</th><th>Reason</th>
+</tr></thead>
+<tbody><tr class="ok">
+<td>return_policy</td><td>cand1</td><td>You have 30 days from purchase to return an item.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>1.0</td>
+<td>-</td>
+</tr><tr class="hallu">
+<td>return_policy</td><td>cand2</td><td>You can return items within 60 days of purchase.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.6</td>
+<td>Possible hallucination found in the candidate</td>
+</tr><tr class="factual">
+<td>return_policy</td><td>cand3</td><td>You have thirty days to return your purchase.</td>
+<td>PASS</td>
+<td>FAIL</td>
+<td>0.75</td>
+<td>Factual accuracy issues detected</td>
+</tr><tr class="hallu">
+<td>return_policy</td><td>cand4</td><td>You have thirty days for returning your purchase.</td>
+<td>PASS</td>
+<td>FAIL</td>
+<td>0.5</td>
+<td>Possible hallucination found in the candidate</td>
+</tr><tr class="ok">
+<td>shipping_cost</td><td>cand1</td><td>Standard shipping costs $5.99.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>1.0</td>
+<td>-</td>
+</tr><tr class="factual">
+<td>shipping_cost</td><td>cand2</td><td>Standard shipping is $9.99.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.8</td>
+<td>Factual accuracy issues detected</td>
+</tr><tr class="factual">
+<td>shipping_cost</td><td>cand3</td><td>Standard shipping is $8.99.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.8</td>
+<td>Factual accuracy issues detected</td>
+</tr><tr class="ok">
+<td>order_status</td><td>cand1</td><td>Order #ORD-78421 has been shipped.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>1.0</td>
+<td>-</td>
+</tr><tr class="factual">
+<td>order_status</td><td>cand2</td><td>Order #ORD-78421 is still pending.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.667</td>
+<td>Factual accuracy issues detected</td>
+</tr><tr class="factual">
+<td>order_status</td><td>cand3</td><td>Your Order #ORD-78421 is pending.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.75</td>
+<td>Factual accuracy issues detected</td>
+</tr></tbody>
+</table>
+<p><b>Note:</b> True Lies uses "hallucination" for low semantic similarity, and
+"factual accuracy issues" for wrong facts. Use both layers in AI QA.</p>
+</body></html>

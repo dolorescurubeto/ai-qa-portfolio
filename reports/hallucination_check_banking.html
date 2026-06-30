@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Hallucination check — Banking portfolio</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; }
+.summary { background: #f4f6f8; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: 0.85rem; }
+th, td { border: 1px solid #ccc; padding: 0.4rem 0.5rem; text-align: left; vertical-align: top; }
+th { background: #2c3e50; color: #fff; }
+tr.ok { background: #d4edda; }
+tr.gap { background: #fff3cd; }
+tr.hallu { background: #f8d7da; }
+tr.factual { background: #ffe8cc; }
+</style></head><body>
+<h1>Hallucination check — Banking portfolio</h1>
+<p>Generated 2026-06-30 14:02 UTC</p>
+<div class="summary">
+<p><b>Factual PASS:</b> 12/23</p>
+<p><b>True Lies PASS:</b> 11/23</p>
+<p><b>TL hallucination label:</b> 4</p>
+<p><b>TL factual issues label:</b> 8</p>
+</div>
+<table>
+<thead><tr>
+<th>Scenario</th><th>ID</th><th>Text</th>
+<th>Factual</th><th>True Lies</th><th>F1</th><th>Reason</th>
+</tr></thead>
+<tbody><tr class="ok">
+<td>checking_balance</td><td>cand1</td><td>Your checking account balance is $1,847.32.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>1.0</td>
+<td>-</td>
+</tr><tr class="factual">
+<td>checking_balance</td><td>cand2</td><td>The balance in your checking account is $1,800.32.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.75</td>
+<td>Factual accuracy issues detected</td>
+</tr><tr class="factual">
+<td>checking_balance</td><td>cand3</td><td>Your savings account balance is $1,847.32.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.75</td>
+<td>Factual accuracy issues detected</td>
+</tr><tr class="ok">
+<td>checking_balance</td><td>cand4</td><td>You have $1,847.32 in your checking account.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>0.857</td>
+<td>-</td>
+</tr><tr class="hallu">
+<td>checking_balance</td><td>cand5</td><td>You have $1,847.32 in your account.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.667</td>
+<td>Possible hallucination found in the candidate</td>
+</tr><tr class="ok">
+<td>checking_balance</td><td>cand6</td><td>Your checking balance is $1,847.32 today.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>0.75</td>
+<td>-</td>
+</tr><tr class="ok">
+<td>savings_balance</td><td>cand1</td><td>Your savings account balance is $5,200.00.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>1.0</td>
+<td>-</td>
+</tr><tr class="factual">
+<td>savings_balance</td><td>cand2</td><td>Your savings balance is $5,000.00.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.571</td>
+<td>Factual accuracy issues detected</td>
+</tr><tr class="factual">
+<td>savings_balance</td><td>cand3</td><td>Your checking account balance is $5,200.00.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.75</td>
+<td>Factual accuracy issues detected</td>
+</tr><tr class="ok">
+<td>savings_balance</td><td>cand4</td><td>You have $5,200.00 in your savings account.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>0.857</td>
+<td>-</td>
+</tr><tr class="hallu">
+<td>savings_balance</td><td>cand5</td><td>You have $5,200.00 in your account.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.667</td>
+<td>Possible hallucination found in the candidate</td>
+</tr><tr class="ok">
+<td>savings_balance</td><td>cand6</td><td>Your savings balance is $5,200.00 today.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>0.75</td>
+<td>-</td>
+</tr><tr class="ok">
+<td>term_deposit_balance</td><td>cand1</td><td>Your term deposit account balance is $12,500.00.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>1.0</td>
+<td>-</td>
+</tr><tr class="factual">
+<td>term_deposit_balance</td><td>cand2</td><td>Your term deposit has $12,000.00.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.5</td>
+<td>Factual accuracy issues detected</td>
+</tr><tr class="ok">
+<td>term_deposit_balance</td><td>cand3</td><td>You have $12,500.00 in your term deposit.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>0.75</td>
+<td>-</td>
+</tr><tr class="ok">
+<td>transfer_limit</td><td>cand1</td><td>Your daily transfer limit on your checking account is $3,000.00.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>1.0</td>
+<td>-</td>
+</tr><tr class="factual">
+<td>transfer_limit</td><td>cand2</td><td>Your daily transfer limit on your checking account is $2,500.00.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.833</td>
+<td>Factual accuracy issues detected</td>
+</tr><tr class="ok">
+<td>transfer_limit</td><td>cand3</td><td>You can transfer up to $3,000.00 from your checking account today.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>0.667</td>
+<td>-</td>
+</tr><tr class="hallu">
+<td>transfer_limit</td><td>cand4</td><td>You can transfer up to $3,200.00 from your checking account today.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.5</td>
+<td>Possible hallucination found in the candidate</td>
+</tr><tr class="ok">
+<td>minimum_balance_savings</td><td>cand1</td><td>Your savings account minimum balance requirement is $100.00.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>1.0</td>
+<td>-</td>
+</tr><tr class="factual">
+<td>minimum_balance_savings</td><td>cand2</td><td>Your savings account minimum balance requirement is $150.00.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.833</td>
+<td>Factual accuracy issues detected</td>
+</tr><tr class="factual">
+<td>minimum_balance_savings</td><td>cand3</td><td>Your checking account minimum balance requirement is $100.00.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>0.833</td>
+<td>Factual accuracy issues detected</td>
+</tr><tr class="hallu">
+<td>minimum_balance_savings</td><td>cand4</td><td>You must maintain at least $100.00 in your savings account.</td>
+<td>PASS</td>
+<td>FAIL</td>
+<td>0.5</td>
+<td>Possible hallucination found in the candidate</td>
+</tr></tbody>
+</table>
+<p><b>Note:</b> True Lies uses "hallucination" for low semantic similarity, and
+"factual accuracy issues" for wrong facts. Use both layers in AI QA.</p>
+</body></html>
