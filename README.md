@@ -13,6 +13,7 @@ You do not need a job working with AI to practice: here you simulate a fictional
 | `week03-metrics/` | BLEU, BERTScore, True Lies | Medium |
 | `week04-drift/` | Regression over time | Medium |
 | `week05-attention/` | BERT attention matrices + relevant tokens | Medium |
+| `week06-llm-judge/` | LLM-as-judge with Ollama (local) | Medium |
 | `data/` | Shared test data | — |
 | `reports/` | Generated HTML reports | — |
 
@@ -63,6 +64,16 @@ python attention_explorer.py --heatmap
 
 See `week05-attention/README.md`.
 
+6. Week 6 (LLM-as-judge with Ollama):
+
+```powershell
+cd week06-llm-judge
+python llm_judge_ollama.py --dry-run --limit 3
+python llm_judge_ollama.py --limit 3
+```
+
+See `week06-llm-judge/README.md` for Ollama install steps.
+
 ## Previous course projects
 
 If you already have exercises in `C:\Users\dell\ia-testers-practice`, this portfolio **organizes and extends** them. You do not need to delete anything.
@@ -76,8 +87,9 @@ Demonstrate that you can:
 - Measure **semantic similarity** (BERTScore, True Lies)
 - Detect **drift** when a model degrades over time
 - Explore **transformer attention** (interpretability)
+- Use an **LLM-as-judge** (Ollama) and compare with factual checks
 - Document results with reports
 
 ## For your resume
 
-> Portfolio: QA evaluation suite for a fictional banking chatbot — golden prompt set, factual validation, semantic metrics (BERTScore/True Lies), drift testing, BERT attention analysis, and HTML reports. Python.
+> Portfolio: QA evaluation suite for a fictional banking chatbot — golden prompt set, factual validation, semantic metrics (BERTScore/True Lies), drift testing, BERT attention analysis, LLM-as-judge (Ollama), and HTML reports. Python.

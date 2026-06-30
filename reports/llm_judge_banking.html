@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>LLM judge — Banking portfolio</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; }
+.summary { background: #f4f6f8; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: 0.85rem; }
+th, td { border: 1px solid #ccc; padding: 0.4rem 0.5rem; text-align: left; vertical-align: top; }
+th { background: #2c3e50; color: #fff; }
+tr.ok { background: #d4edda; }
+tr.fail { background: #f8d7da; }
+tr.gap { background: #fff3cd; }
+tr.disagree { background: #ffe8cc; }
+</style></head><body>
+<h1>LLM judge — Banking portfolio</h1>
+<p>Generated 2026-06-30 15:04 UTC — Model: llama3.2</p>
+<div class="summary">
+<p><b>Factual PASS:</b> 1/3</p>
+<p><b>Judge PASS:</b> 1/3</p>
+<p><b>Agreement rate:</b> 3/3 (100%)</p>
+</div>
+<table>
+<thead><tr>
+<th>Scenario</th><th>ID</th><th>Text</th>
+<th>Factual</th><th>Judge</th><th>Reason</th><th>Agree</th>
+</tr></thead>
+<tbody><tr class="ok">
+<td>checking_balance</td><td>cand1</td><td>Your checking account balance is $1,847.32.</td>
+<td>PASS</td>
+<td>PASS</td>
+<td>Factual accuracy matches reference answer.</td>
+<td>yes</td>
+</tr><tr class="ok">
+<td>checking_balance</td><td>cand2</td><td>The balance in your checking account is $1,800.32.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>Incorrect account balance amount.</td>
+<td>yes</td>
+</tr><tr class="ok">
+<td>checking_balance</td><td>cand3</td><td>Your savings account balance is $1,847.32.</td>
+<td>FAIL</td>
+<td>FAIL</td>
+<td>Inaccurate account type provided instead of checking account balance inquiry.</td>
+<td>yes</td>
+</tr></tbody>
+</table>
+<p><b>Note:</b> Compare regex factual checks (week01–03) with an LLM judge.
+Disagreements deserve human review.</p>
+</body></html>
