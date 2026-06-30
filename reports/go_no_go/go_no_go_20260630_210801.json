@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-06-30T21:08:01.693785+00:00",
+  "decision": "NO-GO",
+  "pytest": {
+    "exit_code": 0,
+    "summary_line": "142 passed in 0.50s",
+    "passed": true
+  },
+  "categories": [
+    {
+      "name": "Factual validation (banking)",
+      "metric": "PASS rate",
+      "value": "12/23 (52%)",
+      "threshold": "baseline 12/23",
+      "status": "PASS",
+      "notes": "Golden set factual checks \u2014 amounts and account types"
+    },
+    {
+      "name": "RAG retrieval (Hit@1)",
+      "metric": "Hit@1",
+      "value": "7/7 (100%)",
+      "threshold": "100% on golden queries",
+      "status": "PASS",
+      "notes": "Week 2 \u2014 correct chunk retrieved"
+    },
+    {
+      "name": "Citation + grounding (golden)",
+      "metric": "Full PASS cases",
+      "value": "2/6",
+      "threshold": "2/6 full pass (demo includes intentional failures)",
+      "status": "WARN",
+      "notes": "Harness detects bad citations and ungrounded amounts"
+    },
+    {
+      "name": "Confidence calibration",
+      "metric": "ECE",
+      "value": "0.258",
+      "threshold": "<= 0.25 for GO",
+      "status": "FAIL",
+      "notes": "Demo data intentionally miscalibrated \u2014 blocks release"
+    },
+    {
+      "name": "RBAC API",
+      "metric": "pytest suite",
+      "value": "tests/test_rbac_api.py",
+      "threshold": "all green",
+      "status": "PASS",
+      "notes": "Verified separately via pytest"
+    },
+    {
+      "name": "Ingestion pipeline",
+      "metric": "pytest suite",
+      "value": "tests/test_ingestion_pipeline.py",
+      "threshold": "all green",
+      "status": "PASS",
+      "notes": "Incremental upsert + remove"
+    },
+    {
+      "name": "Audit lifecycle",
+      "metric": "pytest suite",
+      "value": "tests/test_audit_lifecycle.py",
+      "threshold": "5 events per doc",
+      "status": "PASS",
+      "notes": "Traceability upload \u2192 response"
+    }
+  ],
+  "rationale": [
+    "WARN: Citation + grounding (golden) \u2014 review before production",
+    "FAIL: Confidence calibration \u2014 ECE 0.258 (threshold: <= 0.25 for GO)",
+    "Release blocked until failed gates are resolved."
+  ],
+  "html_report": "C:\\Users\\dell\\ai-qa-portfolio\\reports\\go_no_go\\go_no_go_20260630_210801.html"
+}

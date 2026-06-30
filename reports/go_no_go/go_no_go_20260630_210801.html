@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Go/No-Go Decision Pack</title>
+  <style>
+    body { font-family: Segoe UI, Arial, sans-serif; margin: 2rem; max-width: 960px; }
+    h1 { color: #1a1a2e; }
+    .decision { font-size: 1.5rem; color: #dc3545; font-weight: bold; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #1a1a2e; color: white; }
+  </style>
+</head>
+<body>
+  <h1>AI QA Go/No-Go Decision Pack</h1>
+  <p>Generated: 2026-06-30 21:08 UTC</p>
+  <p>Portfolio: ai-qa-portfolio — Dolores Curubeto</p>
+  <p class="decision">Recommendation: NO-GO</p>
+  <p><strong>Pytest:</strong> 142 passed in 0.50s</p>
+  <h2>Evidence by category</h2>
+  <table>
+    <tr>
+      <th>Category</th><th>Metric</th><th>Value</th><th>Threshold</th><th>Status</th><th>Notes</th>
+    </tr>
+    
+        <tr style="background:#d4edda">
+          <td>Factual validation (banking)</td>
+          <td>PASS rate</td>
+          <td>12/23 (52%)</td>
+          <td>baseline 12/23</td>
+          <td><strong>PASS</strong></td>
+          <td>Golden set factual checks — amounts and account types</td>
+        </tr>
+        <tr style="background:#d4edda">
+          <td>RAG retrieval (Hit@1)</td>
+          <td>Hit@1</td>
+          <td>7/7 (100%)</td>
+          <td>100% on golden queries</td>
+          <td><strong>PASS</strong></td>
+          <td>Week 2 — correct chunk retrieved</td>
+        </tr>
+        <tr style="background:#fff3cd">
+          <td>Citation + grounding (golden)</td>
+          <td>Full PASS cases</td>
+          <td>2/6</td>
+          <td>2/6 full pass (demo includes intentional failures)</td>
+          <td><strong>WARN</strong></td>
+          <td>Harness detects bad citations and ungrounded amounts</td>
+        </tr>
+        <tr style="background:#f8d7da">
+          <td>Confidence calibration</td>
+          <td>ECE</td>
+          <td>0.258</td>
+          <td><= 0.25 for GO</td>
+          <td><strong>FAIL</strong></td>
+          <td>Demo data intentionally miscalibrated — blocks release</td>
+        </tr>
+        <tr style="background:#d4edda">
+          <td>RBAC API</td>
+          <td>pytest suite</td>
+          <td>tests/test_rbac_api.py</td>
+          <td>all green</td>
+          <td><strong>PASS</strong></td>
+          <td>Verified separately via pytest</td>
+        </tr>
+        <tr style="background:#d4edda">
+          <td>Ingestion pipeline</td>
+          <td>pytest suite</td>
+          <td>tests/test_ingestion_pipeline.py</td>
+          <td>all green</td>
+          <td><strong>PASS</strong></td>
+          <td>Incremental upsert + remove</td>
+        </tr>
+        <tr style="background:#d4edda">
+          <td>Audit lifecycle</td>
+          <td>pytest suite</td>
+          <td>tests/test_audit_lifecycle.py</td>
+          <td>5 events per doc</td>
+          <td><strong>PASS</strong></td>
+          <td>Traceability upload → response</td>
+        </tr>
+  </table>
+  <h2>Rationale</h2>
+  <ul><li>WARN: Citation + grounding (golden) — review before production</li><li>FAIL: Confidence calibration — ECE 0.258 (threshold: <= 0.25 for GO)</li><li>Release blocked until failed gates are resolved.</li></ul>
+  <h2>Scope covered (job description)</h2>
+  <ul>
+    <li>RAG retrieval accuracy, citation correctness, grounding</li>
+    <li>Confidence calibration regression</li>
+    <li>Source weighting (week 8 calibration module)</li>
+    <li>RBAC and role-filtered views</li>
+    <li>Incremental ingestion pipeline</li>
+    <li>Audit logging and document lifecycle traceability</li>
+    <li>Automated pytest suites + factual golden set</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ret_001",
+    "query": "What is my checking account balance?",
+    "expected_chunk_id": "chk_bal_01",
+    "expected_doc_id": "checking_balance_policy"
+  },
+  {
+    "id": "ret_002",
+    "query": "savings account balance inquiry demo",
+    "expected_chunk_id": "sav_bal_01",
+    "expected_doc_id": "savings_balance_policy"
+  },
+  {
+    "id": "ret_003",
+    "query": "term deposit balance demo account",
+    "expected_chunk_id": "td_bal_01",
+    "expected_doc_id": "term_deposit_policy"
+  },
+  {
+    "id": "ret_004",
+    "query": "daily transfer limit checking",
+    "expected_chunk_id": "xfer_01",
+    "expected_doc_id": "transfer_limit_policy"
+  },
+  {
+    "id": "ret_005",
+    "query": "savings minimum balance requirement monthly fee",
+    "expected_chunk_id": "min_bal_01",
+    "expected_doc_id": "minimum_balance_policy"
+  },
+  {
+    "id": "ret_006",
+    "query": "return policy 30 days receipt",
+    "expected_chunk_id": "ret_01",
+    "expected_doc_id": "returns_policy"
+  },
+  {
+    "id": "ret_007",
+    "query": "how much does standard shipping cost",
+    "expected_chunk_id": "ship_01",
+    "expected_doc_id": "shipping_policy"
+  }
+]

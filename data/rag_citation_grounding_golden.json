@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cg_001",
+    "query": "checking account balance demo",
+    "answer": "Based on checking_balance_policy: the checking account balance is $1,847.32 for the demo account.",
+    "citations": [{"doc_id": "checking_balance_policy", "chunk_id": "chk_bal_01"}],
+    "retrieved_chunks": ["chk_bal_01"],
+    "expected_citation_pass": true,
+    "expected_grounding_pass": true,
+    "note": "Correct citation and amount grounded in source"
+  },
+  {
+    "id": "cg_002",
+    "query": "standard shipping cost",
+    "answer": "Standard shipping costs $8.99 per order.",
+    "citations": [{"doc_id": "shipping_policy", "chunk_id": "ship_01"}],
+    "retrieved_chunks": ["ship_01"],
+    "expected_citation_pass": true,
+    "expected_grounding_pass": false,
+    "note": "Citation OK but $8.99 not in source ($5.99) — hallucination"
+  },
+  {
+    "id": "cg_003",
+    "query": "standard shipping cost",
+    "answer": "Standard shipping costs $5.99 per order.",
+    "citations": [{"doc_id": "returns_policy", "chunk_id": "ret_01"}],
+    "retrieved_chunks": ["ship_01"],
+    "expected_citation_pass": false,
+    "expected_grounding_pass": true,
+    "note": "Amount grounded but citation points to wrong chunk"
+  },
+  {
+    "id": "cg_004",
+    "query": "return policy",
+    "answer": "You may return items within 30 days with receipt.",
+    "citations": [{"doc_id": "returns_policy", "chunk_id": "ret_01"}],
+    "retrieved_chunks": ["ret_01"],
+    "expected_citation_pass": true,
+    "expected_grounding_pass": true,
+    "note": "No dollar amounts; grounded by absence of conflicting facts"
+  },
+  {
+    "id": "cg_005",
+    "query": "daily transfer limit",
+    "answer": "The daily transfer limit is $3,500.00 on checking.",
+    "citations": [{"doc_id": "transfer_limit_policy", "chunk_id": "xfer_01"}],
+    "retrieved_chunks": ["xfer_01"],
+    "expected_citation_pass": true,
+    "expected_grounding_pass": false,
+    "note": "Wrong limit — source says $3,000.00"
+  },
+  {
+    "id": "cg_006",
+    "query": "savings minimum balance",
+    "answer": "The minimum balance requirement is $100.00.",
+    "citations": [],
+    "retrieved_chunks": ["min_bal_01"],
+    "expected_citation_pass": false,
+    "expected_grounding_pass": true,
+    "note": "Missing citation — common production failure"
+  }
+]

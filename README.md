@@ -14,6 +14,7 @@ You do not need a job working with AI to practice: here you simulate a fictional
 | `week04-drift/` | Regression over time | Medium |
 | `week05-attention/` | BERT attention matrices + relevant tokens | Medium |
 | `week06-llm-judge/` | LLM-as-judge with Ollama (local) | Medium |
+| `tests/` | **pytest** automated suites (job prep Week 1) | Easy |
 | `data/` | Shared test data | — |
 | `reports/` | Generated HTML reports | — |
 
@@ -73,6 +74,15 @@ python llm_judge_ollama.py --limit 3
 ```
 
 See `week06-llm-judge/README.md` for Ollama install steps.
+
+7. **Job prep** — 8-week plan toward RAG / enterprise AI QA roles:
+
+```powershell
+pip install pytest
+pytest tests/ -v
+```
+
+See `PLAN-8-WEEKS-JOB-PREP.md` and `tests/README.md`.
 
 ## Previous course projects
 

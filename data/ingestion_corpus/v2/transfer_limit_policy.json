@@ -1,0 +1,10 @@
+{
+  "doc_id": "transfer_limit_policy",
+  "version": 2,
+  "chunks": [
+    {
+      "chunk_id": "xfer_01",
+      "text": "The daily transfer limit on checking is $3,500.00 effective July 2026."
+    }
+  ]
+}

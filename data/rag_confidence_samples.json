@@ -1,0 +1,86 @@
+[
+  {
+    "id": "conf_001",
+    "query": "checking balance",
+    "confidence": 0.95,
+    "citation_pass": true,
+    "grounding_pass": true
+  },
+  {
+    "id": "conf_002",
+    "query": "checking balance paraphrase",
+    "confidence": 0.92,
+    "citation_pass": true,
+    "grounding_pass": true
+  },
+  {
+    "id": "conf_003",
+    "query": "savings balance",
+    "confidence": 0.88,
+    "citation_pass": true,
+    "grounding_pass": true
+  },
+  {
+    "id": "conf_004",
+    "query": "shipping cost",
+    "confidence": 0.91,
+    "citation_pass": true,
+    "grounding_pass": false
+  },
+  {
+    "id": "conf_005",
+    "query": "transfer limit wrong amount",
+    "confidence": 0.85,
+    "citation_pass": true,
+    "grounding_pass": false
+  },
+  {
+    "id": "conf_006",
+    "query": "return policy",
+    "confidence": 0.78,
+    "citation_pass": true,
+    "grounding_pass": true
+  },
+  {
+    "id": "conf_007",
+    "query": "shipping wrong citation",
+    "confidence": 0.72,
+    "citation_pass": false,
+    "grounding_pass": true
+  },
+  {
+    "id": "conf_008",
+    "query": "minimum balance",
+    "confidence": 0.68,
+    "citation_pass": true,
+    "grounding_pass": true
+  },
+  {
+    "id": "conf_009",
+    "query": "missing citation",
+    "confidence": 0.75,
+    "citation_pass": false,
+    "grounding_pass": true
+  },
+  {
+    "id": "conf_010",
+    "query": "term deposit",
+    "confidence": 0.55,
+    "citation_pass": true,
+    "grounding_pass": false
+  },
+  {
+    "id": "conf_011",
+    "query": "low confidence correct",
+    "confidence": 0.48,
+    "citation_pass": true,
+    "grounding_pass": true
+  },
+  {
+    "id": "conf_012",
+    "query": "low confidence fail",
+    "confidence": 0.42,
+    "citation_pass": false,
+    "grounding_pass": false
+  }
+]

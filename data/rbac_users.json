@@ -1,0 +1,26 @@
+[
+  {
+    "token": "analyst-demo-token",
+    "user_id": "user_analyst_01",
+    "role": "analyst",
+    "name": "Dolores Analyst"
+  },
+  {
+    "token": "manager-demo-token",
+    "user_id": "user_manager_01",
+    "role": "manager",
+    "name": "Team Manager"
+  },
+  {
+    "token": "auditor-demo-token",
+    "user_id": "user_auditor_01",
+    "role": "auditor",
+    "name": "Compliance Auditor"
+  },
+  {
+    "token": "guest-demo-token",
+    "user_id": "user_guest_01",
+    "role": "guest",
+    "name": "Guest User"
+  }
+]

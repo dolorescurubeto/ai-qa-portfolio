@@ -1,0 +1,37 @@
+[
+  {
+    "doc_id": "checking_balance_policy",
+    "weight": 1.0,
+    "tier": "official_policy"
+  },
+  {
+    "doc_id": "savings_balance_policy",
+    "weight": 1.0,
+    "tier": "official_policy"
+  },
+  {
+    "doc_id": "term_deposit_policy",
+    "weight": 1.0,
+    "tier": "official_policy"
+  },
+  {
+    "doc_id": "transfer_limit_policy",
+    "weight": 1.0,
+    "tier": "official_policy"
+  },
+  {
+    "doc_id": "minimum_balance_policy",
+    "weight": 1.0,
+    "tier": "official_policy"
+  },
+  {
+    "doc_id": "returns_policy",
+    "weight": 0.6,
+    "tier": "retail_faq"
+  },
+  {
+    "doc_id": "shipping_policy",
+    "weight": 0.6,
+    "tier": "retail_faq"
+  }
+]

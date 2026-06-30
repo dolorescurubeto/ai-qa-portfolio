@@ -4,6 +4,9 @@ true-lies-validator
 nltk
 torch
 
+# Week 1 job prep — automated test suites
+pytest>=8.0
+flask>=3.0
+
 # Week 4+ (optional)
-# pytest
 # playwright

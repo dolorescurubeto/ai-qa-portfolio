@@ -1,0 +1,10 @@
+{
+  "doc_id": "checking_balance_policy",
+  "version": 1,
+  "chunks": [
+    {
+      "chunk_id": "chk_bal_01",
+      "text": "The demo checking account balance is $1,847.32."
+    }
+  ]
+}

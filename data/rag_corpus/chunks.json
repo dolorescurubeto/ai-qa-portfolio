@@ -1,0 +1,44 @@
+[
+  {
+    "doc_id": "checking_balance_policy",
+    "chunk_id": "chk_bal_01",
+    "title": "Checking account balance inquiries",
+    "text": "Customers may ask about their checking account balance. The standard response must state the checking account balance as $1,847.32 when referencing the demo account."
+  },
+  {
+    "doc_id": "savings_balance_policy",
+    "chunk_id": "sav_bal_01",
+    "title": "Savings account balance inquiries",
+    "text": "For savings account balance questions, agents must reference the savings account and state the balance as $5,200.00 for the demo savings account."
+  },
+  {
+    "doc_id": "term_deposit_policy",
+    "chunk_id": "td_bal_01",
+    "title": "Term deposit balance inquiries",
+    "text": "Term deposit balance inquiries require mentioning the term deposit account. The demo term deposit balance is $12,500.00."
+  },
+  {
+    "doc_id": "transfer_limit_policy",
+    "chunk_id": "xfer_01",
+    "title": "Daily transfer limits",
+    "text": "The daily transfer limit on a checking account is $3,000.00. Transfers above this amount require branch approval."
+  },
+  {
+    "doc_id": "minimum_balance_policy",
+    "chunk_id": "min_bal_01",
+    "title": "Savings minimum balance",
+    "text": "The savings account minimum balance requirement is $100.00. Accounts below this threshold may incur a monthly fee."
+  },
+  {
+    "doc_id": "returns_policy",
+    "chunk_id": "ret_01",
+    "title": "Product returns (retail FAQ)",
+    "text": "Retail customers may return items within 30 days of purchase with receipt. This policy does not apply to banking accounts."
+  },
+  {
+    "doc_id": "shipping_policy",
+    "chunk_id": "ship_01",
+    "title": "Shipping fees (retail FAQ)",
+    "text": "Standard shipping costs $5.99 per order. Express shipping is available at additional cost."
+  }
+]
