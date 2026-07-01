@@ -39,6 +39,83 @@
     "id": "ret_007",
     "query": "how much does standard shipping cost",
     "expected_chunk_id": "ship_01",
-    "expected_doc_id": "shipping_policy"
+    "expected_doc_id": "shipping_policy",
+    "difficulty": "baseline"
+  },
+  {
+    "id": "ret_008",
+    "query": "1847.32 checking demo account balance",
+    "expected_chunk_id": "chk_bal_01",
+    "expected_doc_id": "checking_balance_policy",
+    "difficulty": "hard",
+    "note": "Amount in query — must not confuse with savings $5,200"
+  },
+  {
+    "id": "ret_009",
+    "query": "5200.00 savings demo account balance inquiry",
+    "expected_chunk_id": "sav_bal_01",
+    "expected_doc_id": "savings_balance_policy",
+    "difficulty": "hard",
+    "note": "Overlaps checking/savings/balance tokens"
+  },
+  {
+    "id": "ret_010",
+    "query": "term deposit 12500 demo balance inquiry",
+    "expected_chunk_id": "td_bal_01",
+    "expected_doc_id": "term_deposit_policy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ret_011",
+    "query": "3000 daily limit branch approval checking transfers",
+    "expected_chunk_id": "xfer_01",
+    "expected_doc_id": "transfer_limit_policy",
+    "difficulty": "hard",
+    "note": "checking + limit — must not return balance chunk"
+  },
+  {
+    "id": "ret_012",
+    "query": "100.00 minimum savings monthly fee threshold",
+    "expected_chunk_id": "min_bal_01",
+    "expected_doc_id": "minimum_balance_policy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ret_013",
+    "query": "return items 30 days receipt retail not banking",
+    "expected_chunk_id": "ret_01",
+    "expected_doc_id": "returns_policy",
+    "difficulty": "hard",
+    "note": "Negative keyword banking — disambiguate from bank policies"
+  },
+  {
+    "id": "ret_014",
+    "query": "5.99 standard shipping per order express",
+    "expected_chunk_id": "ship_01",
+    "expected_doc_id": "shipping_policy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ret_015",
+    "query": "checking balance inquiry demo account 1847",
+    "expected_chunk_id": "chk_bal_01",
+    "expected_doc_id": "checking_balance_policy",
+    "difficulty": "hard",
+    "note": "Word-order variation vs ret_001"
+  },
+  {
+    "id": "ret_016",
+    "query": "maximum daily transfer checking account 3000",
+    "expected_chunk_id": "xfer_01",
+    "expected_doc_id": "transfer_limit_policy",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ret_017",
+    "query": "savings minimum 100 requirement fee below threshold",
+    "expected_chunk_id": "min_bal_01",
+    "expected_doc_id": "minimum_balance_policy",
+    "difficulty": "hard",
+    "note": "Overlaps with savings balance chunk"
   }
 ]

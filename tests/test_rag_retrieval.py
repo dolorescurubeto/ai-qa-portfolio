@@ -13,7 +13,8 @@ sys.path.insert(0, str(HARNESS))
 from retriever import load_corpus, retrieval_hit_at_k, retrieve  # noqa: E402
 
 GOLDEN_FILE = ROOT / "data" / "rag_retrieval_golden.json"
-EXPECTED_HIT_AT_1 = 7  # all golden queries
+EXPECTED_HIT_AT_1 = 17  # 7 baseline + 10 hard
+EXPECTED_HARD_CASES = 10
 
 
 def _load_golden():
@@ -54,6 +55,18 @@ def test_retrieval_accuracy_baseline(golden_queries, corpus):
     )
     assert len(golden_queries) == EXPECTED_HIT_AT_1
     assert hits == EXPECTED_HIT_AT_1
+
+
+@pytest.mark.regression
+def test_hard_retrieval_cases_hit_at_1(golden_queries, corpus):
+    hard = [c for c in golden_queries if c.get("difficulty") == "hard"]
+    hits = sum(
+        1
+        for case in hard
+        if retrieval_hit_at_k(case["query"], case["expected_chunk_id"], corpus, k=1)
+    )
+    assert len(hard) == EXPECTED_HARD_CASES
+    assert hits == EXPECTED_HARD_CASES
 
 
 def test_top_result_has_positive_score(corpus):
