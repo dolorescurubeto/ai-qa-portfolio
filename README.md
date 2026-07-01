@@ -78,6 +78,26 @@ python llm_judge_ollama.py --limit 3
 
 See `week06-llm-judge/README.md` for Ollama install steps.
 
+**Compare two Ollama judge models (Priority 3):**
+
+```powershell
+cd week06-llm-judge
+python compare_models.py --dry-run --limit 3
+python compare_models.py --limit 5
+```
+
+See `week06-llm-judge/notes-model-compare.md`.
+
+**E2E Playwright + validation (Priority 4):**
+
+```powershell
+pip install -r requirements-e2e.txt
+playwright install chromium
+pytest tests/test_e2e_banking_chat.py -m e2e -v
+```
+
+See `week14-e2e-chat/README.md`.
+
 Adversarial / prompt injection:
 
 ```powershell

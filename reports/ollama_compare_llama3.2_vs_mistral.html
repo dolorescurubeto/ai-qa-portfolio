@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Ollama model comparison</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; }
+table { border-collapse: collapse; width: 100%; font-size: 0.85rem; }
+th, td { border: 1px solid #ccc; padding: 0.4rem; }
+th { background: #2c3e50; color: #fff; }
+tr.ok { background: #d4edda; }
+tr.fail { background: #f8d7da; }
+tr.disagree { background: #fff3cd; }
+</style></head><body>
+<h1>Ollama LLM judge — model comparison</h1>
+<p>2026-07-01 19:44 UTC — A: llama3.2 | B: mistral</p>
+<p><b>Factual PASS:</b> 2/5</p>
+
+<p><b>Judge PASS A (llama3.2):</b> 2/5</p>
+<p><b>Judge PASS B (mistral):</b> 3/5</p>
+<p><b>Agree with factual A:</b> 5/5</p>
+<p><b>Agree with factual B:</b> 4/5</p>
+<p><b>Models agree:</b> 4/5</p>
+<table>
+<thead><tr>
+<th>Scenario</th><th>ID</th><th>Text</th><th>Factual</th>
+<th>Judge A</th><th>Judge B</th><th>Models agree</th>
+</tr></thead>
+<tbody><tr class="ok">
+<td>checking_balance</td><td>cand1</td><td>Your checking account balance is $1,847.32.</td>
+<td>PASS</td>
+<td>PASS</td><td>PASS</td><td>yes</td>
+</tr><tr class="ok">
+<td>checking_balance</td><td>cand2</td><td>The balance in your checking account is $1,800.32.</td>
+<td>FAIL</td>
+<td>FAIL</td><td>FAIL</td><td>yes</td>
+</tr><tr class="ok">
+<td>checking_balance</td><td>cand3</td><td>Your savings account balance is $1,847.32.</td>
+<td>FAIL</td>
+<td>FAIL</td><td>FAIL</td><td>yes</td>
+</tr><tr class="ok">
+<td>checking_balance</td><td>cand4</td><td>You have $1,847.32 in your checking account.</td>
+<td>PASS</td>
+<td>PASS</td><td>PASS</td><td>yes</td>
+</tr><tr class="disagree">
+<td>checking_balance</td><td>cand5</td><td>You have $1,847.32 in your account.</td>
+<td>FAIL</td>
+<td>FAIL</td><td>PASS</td><td>no</td>
+</tr></tbody>
+</table>
+</body></html>

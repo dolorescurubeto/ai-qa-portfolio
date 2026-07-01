@@ -1,0 +1,97 @@
+{
+  "summary": {
+    "count": 5,
+    "factual_pass": 2,
+    "model_a_judge_pass": 2,
+    "model_b_judge_pass": 3,
+    "model_a_agreement": 5,
+    "model_b_agreement": 4,
+    "models_agree_with_each_other": 4,
+    "disagreement_cases": [
+      {
+        "scenario": "checking_balance",
+        "id": "cand5",
+        "factual": false,
+        "judge_a": "FAIL",
+        "judge_b": "PASS"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "scenario": "checking_balance",
+      "id": "cand1",
+      "text": "Your checking account balance is $1,847.32.",
+      "factual_pass": true,
+      "judge_a_verdict": "PASS",
+      "judge_b_verdict": "PASS",
+      "judge_a_reason": "Factual accuracy matches ground truth.",
+      "judge_b_reason": "Factual accuracy is maintained in both responses.",
+      "judge_a_pass": true,
+      "judge_b_pass": true,
+      "agree_a": true,
+      "agree_b": true,
+      "models_agree": true
+    },
+    {
+      "scenario": "checking_balance",
+      "id": "cand2",
+      "text": "The balance in your checking account is $1,800.32.",
+      "factual_pass": false,
+      "judge_a_verdict": "FAIL",
+      "judge_b_verdict": "FAIL",
+      "judge_a_reason": "Incorrect account balance amount",
+      "judge_b_reason": "The candidate response does not match the reference answer as the numbers do not match.",
+      "judge_a_pass": false,
+      "judge_b_pass": false,
+      "agree_a": true,
+      "agree_b": true,
+      "models_agree": true
+    },
+    {
+      "scenario": "checking_balance",
+      "id": "cand3",
+      "text": "Your savings account balance is $1,847.32.",
+      "factual_pass": false,
+      "judge_a_verdict": "FAIL",
+      "judge_b_verdict": "FAIL",
+      "judge_a_reason": "Account type is incorrect in candidate response",
+      "judge_b_reason": "Incorrect account type stated.",
+      "judge_a_pass": false,
+      "judge_b_pass": false,
+      "agree_a": true,
+      "agree_b": true,
+      "models_agree": true
+    },
+    {
+      "scenario": "checking_balance",
+      "id": "cand4",
+      "text": "You have $1,847.32 in your checking account.",
+      "factual_pass": true,
+      "judge_a_verdict": "PASS",
+      "judge_b_verdict": "PASS",
+      "judge_a_reason": "The account type is accurately stated.",
+      "judge_b_reason": "The candidate response matches the reference answer in both factual accuracy and syntax.",
+      "judge_a_pass": true,
+      "judge_b_pass": true,
+      "agree_a": true,
+      "agree_b": true,
+      "models_agree": true
+    },
+    {
+      "scenario": "checking_balance",
+      "id": "cand5",
+      "text": "You have $1,847.32 in your account.",
+      "factual_pass": false,
+      "judge_a_verdict": "FAIL",
+      "judge_b_verdict": "PASS",
+      "judge_a_reason": "Inaccurate account type ('your' instead of 'Your')",
+      "judge_b_reason": "Both responses convey the same factual information.",
+      "judge_a_pass": false,
+      "judge_b_pass": true,
+      "agree_a": true,
+      "agree_b": false,
+      "models_agree": false
+    }
+  ]
+}

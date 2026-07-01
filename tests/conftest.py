@@ -5,6 +5,8 @@ from pathlib import Path
 
 import pytest
 
+pytest_plugins = ("pytest_playwright",)
+
 ROOT = Path(__file__).resolve().parent.parent
 SCENARIOS_FILE = ROOT / "data" / "golden_scenarios.json"
 CANDIDATES_FILE = ROOT / "data" / "candidates.json"
