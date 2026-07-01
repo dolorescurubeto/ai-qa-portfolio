@@ -6,6 +6,7 @@ an HTML report with GO / NO-GO / GO-WITH-CONDITIONS recommendation.
 """
 
 import json
+import os
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -271,8 +272,10 @@ def render_html(
 </html>"""
 
 
-def build_pack(run_pytest: bool = True) -> tuple[Path, Path]:
-    pytest_info = run_pytest_summary() if run_pytest else {"passed": True, "summary_line": "skipped"}
+def build_pack(run_pytest: bool | None = None) -> tuple[Path, Path]:
+    if run_pytest is None:
+        run_pytest = os.environ.get("SKIP_PYTEST_IN_PACK") != "1"
+    pytest_info = run_pytest_summary() if run_pytest else {"passed": True, "summary_line": "skipped (CI or explicit)"}
     categories = evaluate_all_categories()
     decision = overall_decision(categories, pytest_info.get("passed", False))
     rationale = decision_rationale(decision, categories, pytest_info.get("passed", False))

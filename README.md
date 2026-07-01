@@ -1,5 +1,7 @@
 ﻿# AI QA Portfolio — Dolores Curubeto
 
+![AI QA Tests](https://github.com/dolorescurubeto/ai-qa-portfolio/actions/workflows/pytest.yml/badge.svg)
+
 Practice portfolio for **AI Testing**, built after completing an AI-for-testers course.
 
 You do not need a job working with AI to practice: here you simulate a fictional banking chatbot and evaluate it with Python scripts.

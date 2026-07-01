@@ -1,0 +1,3 @@
+# Minimal deps for CI — pytest job prep suite (no torch/BERTScore)
+pytest>=8.0
+flask>=3.0
