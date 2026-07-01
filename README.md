@@ -14,6 +14,7 @@ You do not need a job working with AI to practice: here you simulate a fictional
 | `week04-drift/` | Regression over time | Medium |
 | `week05-attention/` | BERT attention matrices + relevant tokens | Medium |
 | `week06-llm-judge/` | LLM-as-judge with Ollama (local) | Medium |
+| `week13-adversarial/` | Prompt injection & adversarial testing | Medium |
 | `tests/` | **pytest** automated suites (job prep Week 1) | Easy |
 | `data/` | Shared test data | — |
 | `reports/` | Generated HTML reports | — |
@@ -74,6 +75,14 @@ python llm_judge_ollama.py --limit 3
 ```
 
 See `week06-llm-judge/README.md` for Ollama install steps.
+
+Adversarial / prompt injection:
+
+```powershell
+pytest tests/test_adversarial.py -v
+```
+
+See `week13-adversarial/README.md`.
 
 7. **Job prep** — 8-week plan toward RAG / enterprise AI QA roles:
 
